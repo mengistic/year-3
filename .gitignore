@@ -1,0 +1,10 @@
+
+
+junk/**
+personal/
+attendance/
+*.log
+*.pre
+*.aux
+*.gz
+*.html
