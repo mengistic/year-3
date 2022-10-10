@@ -24,7 +24,7 @@
 
 % ==> main font
 \setmainfont[
-	BoldFont = Kdam Thmor,
+	BoldFont = Khmer OS Bokor,
 	ItalicFont = Khmer OS Metal Chrieng,
 	BoldItalicFont = Khmer OS Muol,
 	SmallCapsFont = TeX Gyre Pagella,
@@ -37,7 +37,7 @@
 
 \newfontfamily{\khmerfamily}
 [
-	BoldFont = Kdam Thmor,
+	BoldFont = Khmer OS Bokor,
 	ItalicFont = Khmer OS Metal Chrieng,
 	BoldItalicFont = Khmer OS Muol,
 	SmallCapsFont = TeX Gyre Pagella,
@@ -46,14 +46,12 @@
 \newfontfamily{\englishfamily}{TeX Gyre Pagella}[Ligatures=TeX, Scale=1.1] %Simonetta
 \newfontfamily{\monofamily}[Scale=1.3]{Latin Modern Mono}
 \newfontfamily{\latinfamily}[Scale=1.3]{Latin Modern Roman}
-\newfontfamily{\tacteingfamily}[Scale=3]{Tacteing}
 
 % Define new font family (have to)   <-- BUG
 \newrobustcmd{\englishfont}{\englishfamily\let\currentenglish\englishfamily }
 \newrobustcmd{\khmerfont}{\khmerfamily\let\currentkhmer\khmerfamily}
 \newrobustcmd{\mono}{\monofamily\let\currentenglish\monofamily }
 \newrobustcmd{\en}{\latinfamily\let\currentenglish\latinfamily}
-\newrobustcmd{\tacteing}{\tacteingfamily\let\currentenglish\tacteingfamily}
 
 % Initialize fonts
 \khmerfont\englishfont
@@ -201,6 +199,7 @@
 \def\labelitemi{$\circ$}
 \def\inv{^{-1}}
 \def\ang#1{\left\langle#1\right\rangle}
+\def\inner#1{\left\langle#1\right\rangle}
 \def\tran{^\mathrm{T}}
 %\renewcommand{\d}{\frac{d}{dx}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
