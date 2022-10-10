@@ -1,0 +1,91 @@
+
+\input{../preamble}
+
+
+\renewcommand{\theexercise}{\thechapter{.}\arabic{exercise}}
+
+\begin{document}
+
+
+\chapter{លំហអឺគ្លីត}
+
+\section{ក្រុមទី ៤}
+
+\setcounter{exercise}{6}
+\begin{exercise}
+	បង្ហាញថាអនុវត្តន៍ $\Phi:\R^2\to\R$ កំណត់ដោយ
+  \[
+    \Phi( (x_1,y_1),~(x_2,y_2) )=
+    2x_1y_1+2x_2y_2+x_1y_2+x_2y_1
+  \]
+  ជាផលគុណស្កាលែមួយលើ $\R^2$ ។
+\end{exercise}
+\begin{solution}
+	ស្រាយថា $\Phi$ ជាផលគុណស្កាលែមួយលើ $\R^2$ ៖ យើងតាង
+  $\vec{u}=(x_1, y_1)$ និង $\vec{v}=(x_2, y_2)$ ។
+  \begin{itemize}
+  \item លក្ខណៈឆ្លុះ ៖
+    យើងឃើញថា
+    $\Phi(\vec{u}, \vec{v})=2x_1y_1+2x_2y_2+x_1y_2+x_2y_1=\Phi(\vec{v},\vec{u})$ ។
+  \item លក្ខណៈ Non-negativity ៖
+    យើងឃើញថា $\Phi(\vec{u},\vec{u})=2x_1^2+2x_2^2+x$
+  \end{itemize}
+\end{solution}
+
+
+
+\begin{exercise}
+	$\R^3$ ជាលំហអឺគ្លីតប្រដាប់ដោយផលគុណស្កាលែកាណូនិក និង
+  $\mathcal{B}=(\vec{u_1},\vec{u_2},\vec{u_3})$ ដែល
+  $\vec{u_1}=(1,0,1),~\vec{u_2}=(1,0,2)$ និង $\vec{u_3}=(1,1,1)$ ។
+  \begin{enumerate}
+  \item បង្ហាញថា $\mathcal B$ ជាគោលនៃ $\R^3$ ។
+  \item កំណត់គោលអរតូណរម៉ាល់ $\mathcal B$ តាមវិធានស្មីត (Gram-Schidt) ។
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+  \text{}
+  \begin{enumerate}
+  \item បង្ហាញថា $\mathcal B$ ជាគោលនៃ $\R^3$\\
+    យើងពិនិត្យមើលម៉ាទ្រីស
+    \begin{align*}
+    	\det{B}
+      &= \begin{vmatrix} \vec{u_1} \vec{u_2} \vec{u_3} \end{vmatrix}\\
+      &=
+        \begin{vmatrix}
+        	1 &1 &1\\
+          0 &0 &1\\
+          1 &2 &1
+        \end{vmatrix}\\
+      &= 1(-2) -1(-1) +1(0) \neq 0
+    \end{align*}
+    មានន័យថា $\mathcal B$ ជា span នៃ $\R^3$ ហើយវា Linear Independant.\\
+    ដូចនេះ \fbox{$\mathcal B$ ជាគោលមួយនៃ $\R^3$ ។}
+
+  \item កំណត់គោលអរតូណរម៉ាល់ $\mathcal B$ តាមវិធានស្មីត\\
+    ដំបូងយើងមាន $\vec{w_1}=\vec{u_1}=(1,0,1)$ ។ តាមវិធានស្មីត
+    \begin{align*}
+      \vec{w_2}
+      &= \vec{u_2} - \frac{\inner{\vec{u_2}, \vec{w_1}}}{\norm{\vec{w_1}}^2}\vec{w_1}\\
+      &=(1,0,2) - \frac{\inner{(1,0,2), (1,0,1)}}{{1^2 + 0^2 + 1^2}} (1,0,1)\\
+      &=(1,0,2) - \frac{3}{{2}} (1,0,1)\\
+      &=(\textstyle -\frac{1}{2}, 0, \frac{1}{2})
+    \end{align*}
+    ដូចគ្នាដែរយើងបាន
+    \begin{align*}
+    	\vec{w_3}
+      &= \vec{v_3} - \frac{\inner{\vec{v_3}, \vec{w_2}}}{\norm{\vec{w_2}}}\vec{w_2}
+        -\frac{\inner{\vec{v_3}, \vec{w_1}}}{\norm{\vec{w_1}}}\vec{w_1}\\
+      &=
+        \begin{pmatrix}
+        	2
+        \end{pmatrix}
+    \end{align*}
+  \end{enumerate}
+\end{solution}
+
+
+
+
+
+\end{document}
